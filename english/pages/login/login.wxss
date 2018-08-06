@@ -1,6 +1,7 @@
 input{
    float: left;
-   height: 60rpx;
+   height: 80rpx;
+   width: 400rpx;
     
 }
 .login{
@@ -12,7 +13,7 @@ input{
     text-align: center;
     padding-left: 20rpx;
     padding-right: 20rpx;
-    
+  
 }
 .code{
     float: left;
@@ -23,16 +24,14 @@ input{
     text-align: center;
     padding-left: 10rpx;
     padding-right: 10rpx;
+    margin-top: 10rpx;
+    
     
 }
 .label{
     float: left;
-    line-height: 60rpx;
-    height: 60rpx;
-   
-}
-label{
-    float: left;
+    line-height: 80rpx;
+    height: 80rpx;
    
 }
 .login_box{
@@ -43,7 +42,11 @@ label{
 }
 .row{
     margin-bottom: 60rpx;
-    
-
-
+    display: flex;
+}
+.time{
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 10rpx;
+    text-align: center;
 }

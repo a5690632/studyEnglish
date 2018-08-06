@@ -28,7 +28,7 @@ Page({
             method:"POST",
             success: res => {
                 res.data.data.suiteList.forEach(element => {
-                    element.logo="https://www.devpmis.cn/wxapp"+element.logo
+                    element.logo="https://www.readinglib.cn/wxapp"+element.logo
                 });
               
                 this.setData({
@@ -55,7 +55,7 @@ Page({
                         });
                     }
                     res.data.data.suiteList.forEach(element => {
-                        element.logo="https://www.devpmis.cn/wxapp"+element.logo
+                        element.logo="https://www.readinglib.cn/wxapp"+element.logo
                     });
                     let booklist = this.data.booklist.concat(res.data.data.suiteList);
                     let page =Number(this.data.page)+ 1;

@@ -1,22 +1,20 @@
-<view>
+<view >
+    <view class="help fa fa-question-circle" bindtap="help"></view>
     <view class="img">
         <image src="{{page_detail.img}}" wx:if="page_detail.img" mode="aspectFit"></image>
-        <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else  mode="aspectFit"></image>
+        <image src="https://www.readinglib.cn/wxapp/web/img/blank.png" wx:else  mode="aspectFit"></image>
     </view>
     <view class="item_box">
         <view wx:for="{{itemList}}"  data-audio="{{item.audio}}"  wx:for-index="idx"  data-index="{{idx}}"  bindtap="choose_play" >
             <view class="active item" wx:if="{{idx==index}}">   {{item.subject}}</view>
             <view class="nouse item"  wx:else> {{item.subject}}</view>
         </view>
-      
-        
     </view>
-  
     <view class="playbox">
         <view>当前第{{page_detail.sort}}页</view>
-        <view bindtap="prev"    class="fa fa-step-backward  box"></view>
-        <view bindtap="play"    class="fa fa-play  box"     wx:if="{{innerAudioContext.paused}}"></view>
-        <view bindtap="play"    class="fa fa-pause box"     wx:else></view>
+        <view bindtap="prev"    class="fa fa-step-backward  box"></view>.
+        <view bindtap="play"    class="fa fa-play  box"     wx:if="{{status==0}}"></view>
+        <view bindtap="pause"   class="fa fa-pause box"     wx:else></view>
         <view bindtap="next"    class="fa fa-step-forward   box"></view>
         <view>共{{page_detail.totalPage}}页</view>
     </view>

@@ -3,7 +3,7 @@
         <view wx:for="{{pageList}}" id="{{item.id}}" bindtap="enter_course" class="item" data-name="{{item.name}}">
             <view class="img">
                 <image src="{{item.img}}" wx:if="{{item.img}}"></image>
-                <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                <image src="https://www.readinglib.cn//wxapp/web/img/blank.png" wx:else></image>
             </view>
             <view class="name">{{item.name}}</view>
         </view>

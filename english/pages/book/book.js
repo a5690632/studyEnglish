@@ -29,7 +29,7 @@ Page({
             method:"POST",
             success: (res) => {
                 res.data.data.pageList.forEach(element => {
-                    element.img="https://www.devpmis.cn/wxapp"+element.img
+                    element.img="https://www.readinglib.cn/wxapp"+element.img
                 });
                 this.setData({
                     pageList: res.data.data.pageList,
@@ -57,7 +57,7 @@ Page({
                         });
                     }
                     res.data.data.pageList.forEach(element => {
-                        element.img="https://www.devpmis.cn/wxapp"+element.img
+                        element.img="https://www.readinglib.cn/wxapp"+element.img
                     });
                     let pageList = this.data.pageList.concat(res.data.data.pageList);
                     let page =Number(this.data.page) + 1;

@@ -5,7 +5,7 @@
                 <dl>
                     <dt>
                         <image src="{{item.img}}" wx:if="{{item.img}}"></image>
-                        <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                        <image src="https://www.readinglib.cn/wxapp/web/img/blank.png" wx:else></image>
                     </dt>
                     <dd>
                         <text>{{item.name}}</text>
@@ -21,7 +21,7 @@
                 <dl>
                     <dt>
                         <image src="{{item.img}}" wx:if="{{item.img}}"></image>
-                        <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                        <image src="https://www.readinglib.cn/wxapp/web/img/blank.png" wx:else></image>
                     </dt>
                     <dd>
                         <text>{{item.name}}</text>

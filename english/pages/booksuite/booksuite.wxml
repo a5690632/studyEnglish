@@ -5,7 +5,7 @@
         <dl>
             <dt class="img">
                 <image src="{{item.logo}}" wx:if="{{item.logo}}"></image>
-                <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                <image src="https://www.readinglib.cn/wxapp/web/img/blank.png" wx:else></image>
             </dt>
             <dd class="name">
                 <text>{{item.enName}}</text>

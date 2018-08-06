@@ -7,18 +7,18 @@ const onLineBaseUrl = ""; //正式版线上接口
 
 const INTERFACE = { //接口定义
     local: {
-        login: "https://www.devpmis.cn/wxapp/api/v1/login",
-        send_code: "https://www.devpmis.cn/wxapp/api/v1/sendVerifyCode",
-        auto_login:"https://www.devpmis.cn/wxapp/api/v1/auto_login",
-        index: "https://www.devpmis.cn/wxapp/api/v1/homepage",
-        booksuite:"https://www.devpmis.cn/wxapp/api/v1/searchByCategory",
-        booklist: "https://www.devpmis.cn/wxapp/api/v1/bookList",
-        book: "https://www.devpmis.cn/wxapp/api/v1/book",
-        course: "https://www.devpmis.cn/wxapp/api/v1/page",
-        logout: "https://www.devpmis.cn/wxapp/api/v1/logout",
-        vip_help:"https://www.devpmis.cn/wxapp/api/v1/vip_info",
-        user_message:"https://www.devpmis.cn/wxapp/api/v1/getMyInfo",
-        concent_us:"https://www.devpmis.cn/wxapp/api/v1/contact_us",
+        login: "https://www.readinglib.cn/wxapp/api/v1/login",
+        send_code: "https://www.readinglib.cn/wxapp/api/v1/sendVerifyCode",
+        auto_login:"https://www.readinglib.cn/wxapp/api/v1/auto_login",
+        index: "https://www.readinglib.cn/wxapp/api/v1/homepage",
+        booksuite:"https://www.readinglib.cn/wxapp/api/v1/searchByCategory",
+        booklist: "https://www.readinglib.cn/wxapp/api/v1/bookList",
+        book: "https://www.readinglib.cn/wxapp/api/v1/book",
+        course: "https://www.readinglib.cn/wxapp/api/v1/page",
+        logout: "https://www.readinglib.cn/wxapp/api/v1/logout",
+        vip_help:"https://www.readinglib.cn/wxapp/api/v1/vip_info",
+        user_message:"https://www.readinglib.cn/wxapp/api/v1/getMyInfo",
+        concent_us:"https://www.readinglib.cn/wxapp/api/v1/contact_us",
         
     }
 }

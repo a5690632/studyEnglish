@@ -1,3 +1,13 @@
+
+.help{
+    position: absolute;
+    top: 20rpx;
+    right: 40rpx;
+    height: 40rpx;
+    width: 40rpx;
+    font-size:36rpx;
+}
+
 .img{
     width: 100%;
     display: flex;

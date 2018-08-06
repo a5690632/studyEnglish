@@ -24,7 +24,7 @@ Page({
                             url: app.interface.index,
                             success: (res) => {
                                 res.data.data.suiteList.forEach(e => {
-                                    e.logo="https://www.devpmis.cn/wxapp"+e.logo
+                                    e.logo="https://www.readinglib.cn/wxapp"+e.logo
                                 });
                                 this.setData({
                                     categoryList: res.data.data.categoryList, //功能区

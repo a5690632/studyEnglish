@@ -1,4 +1,4 @@
-1,https://www.devpmis.cn/wxapp/api/v1/bookList?suiteId=1
+1,https://www.readinglib.cn/wxapp/api/v1/bookList?suiteId=1
 	缺少分页参数
 
 回复：已增加分页参数，参考searchByCategory接口：{'currentPage': 1}
@@ -7,22 +7,22 @@
 	
 回复：已增加img属性，
 
-<注意>通用规则：在使用图片时，如果img属性为空，请使用:https://www.devpmis.cn/wxapp/web/img/blank.png占位
+<注意>通用规则：在使用图片时，如果img属性为空，请使用:https://www.readinglib.cn/wxapp/web/img/blank.png占位
 
-3,https://www.devpmis.cn/wxapp/api/v1/homepage 
+3,https://www.readinglib.cn/wxapp/api/v1/homepage 
 的categoryList 里的logo  为null
 	
-回复：在使用图片时，如果img属性为空，请使用:https://www.devpmis.cn/wxapp/web/img/blank.png占位
+回复：在使用图片时，如果img属性为空，请使用:https://www.readinglib.cn/wxapp/web/img/blank.png占位
 
 4，还少获取会员信息的接口
 回复：
-	req.url= https://www.devpmis.cn/wxapp/api/v1/getMyInfo
+	req.url= https://www.readinglib.cn/wxapp/api/v1/getMyInfo
 	返回值： {"status":1,"msg":null,"page":null,"data":{"userinfo":{"id":5,"name":null,"email":null,"password":null,"status":1,"mobile":"13011125611","photoFileId":null,"adminFlag":null,"type":0,"landFlag":null,"creatTime":"2018-07-31 21:19:47","createUserId":null,"updateUserId":null,"updateTime":null,"osType":null,"deviceId":null,"token":null,"lastLoginTime":null,"tokenStartTime":null,"regIpAddr":null}}}
 	type为大于0的数时为vip，否则不是vip。
 5,两个文案信息
 回复：补充‘咨询联系’信息接口
 	联系我们提示信息
-	req.url= https://www.devpmis.cn/wxapp/api/v1/contact_us
+	req.url= https://www.readinglib.cn/wxapp/api/v1/contact_us
 	返回值： {"status":1,"msg":null,"page":null,"data":{"title":"联系我们","content":"部分资源仅供内部使用。\n如有问题，请与我们反馈。\n电话：13911082251\nQQ:42515181"}}
 
 

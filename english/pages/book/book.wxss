@@ -3,7 +3,7 @@
 }
 .bookbox .item{
     float: left;
-    margin-right:16rpx; 
+    margin-right:30rpx; 
 }
 .bookbox .img{
     height:150rpx ;
