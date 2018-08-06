@@ -1,0 +1,46 @@
+接口--- 发送验证码
+req.url= http://39.104.171.132/wxapp/api/v1/sendVerifyCode?mobile=13911082251
+返回值： {"status":1,"msg":"发送成功","page":null,"data":{"verifyCode":"2989"}}
+
+接口--- 登录
+req.url= http://39.104.171.132/wxapp/api/v1/login?mobile=13911082251&verifyCode=2989
+返回值： {"status":1,"msg":"登录成功","page":null,"data":{"token":"15F3EBDF7F644E7A81749ACC13C4B015"}}
+
+接口--- 根据token自动登录
+req.url= http://39.104.171.132/wxapp/api/v1/auto_login?token=15F3EBDF7F644E7A81749ACC13C4B015
+返回值： {"status":1,"msg":"自动登录成功","page":null,"data":{}}
+
+接口--- 获取首页信息
+req.url= http://39.104.171.132/wxapp/api/v1/homepage
+返回值： {"status":1,"msg":"操作成功","page":null,"data":{"noticeList":[{"id":1,"subject":"公告1","logo":"/web/img/notice1.png","url":""},{"id":2,"subject":"公告2","logo":"/web/img/notice2.png","url":""}],"categoryList":[{"id":1,"name":"分级阅读","code":"code_1","memo":null,"sort":1,"status":null,"logo":null},{"id":2,"name":"自然拼读","code":"code_2","memo":null,"sort":2,"status":null,"logo":null},{"id":3,"name":"经典绘本","code":"code_3","memo":null,"sort":3,"status":null,"logo":null},{"id":4,"name":"教材","code":"code_4","memo":null,"sort":4,"status":null,"logo":null}],"category":{"id":1,"name":"分级阅读","code":"code_1","memo":null,"sort":1,"status":null,"logo":null},"suiteList":[{"id":1,"name":"牛津阅读树第1季","enName":"oxford level 1","catagoryId":1,"sort":1,"memo":null,"status":null,"logo":"/web/img/1.jpg","createTime":null,"updateTime":null},{"id":2,"name":"牛津阅读树第2季","enName":"oxford level 2","catagoryId":1,"sort":2,"memo":null,"status":null,"logo":"/web/img/2.jpg","createTime":null,"updateTime":null},{"id":3,"name":"牛津阅读树第3季","enName":"oxford level 3","catagoryId":1,"sort":3,"memo":null,"status":null,"logo":"/web/img/3.jpg","createTime":null,"updateTime":null},{"id":4,"name":"牛津阅读树第4季","enName":"oxford level 4","catagoryId":1,"sort":4,"memo":null,"status":null,"logo":"/web/img/tab2.jpg","createTime":null,"updateTime":null},{"id":5,"name":"牛津阅读树第5季","enName":"oxford level 5","catagoryId":1,"sort":5,"memo":null,"status":null,"logo":"/web/img/tab3.jpg","createTime":null,"updateTime":null},{"id":6,"name":"牛津阅读树第6季","enName":"oxford level 6","catagoryId":1,"sort":6,"memo":null,"status":null,"logo":"/web/img/tab4.jpg","createTime":null,"updateTime":null}]}}
+
+接口--- 根据categoryId查询bookSuite列表
+req.url= http://39.104.171.132/wxapp/api/v1/searchByCategory?categoryId=1&keyword=%E7%89%9B%E6%B4%A5%E9%98%85%E8%AF%BB%E6%A0%91
+Post Json参数= {"currentPage": 1}
+返回值： {"status":1,"msg":"操作成功","page":{"pageSize":2,"totalPage":3,"totalCount":6,"currentPage":1,"sortField":null,"order":null,"result":[],"currentResult":0},"data":{"suiteList":[{"id":1,"name":"牛津阅读树第1季","enName":"oxford level 1","catagoryId":1,"sort":1,"memo":null,"status":null,"logo":"/web/img/1.jpg","createTime":null,"updateTime":null},{"id":2,"name":"牛津阅读树第2季","enName":"oxford level 2","catagoryId":1,"sort":2,"memo":null,"status":null,"logo":"/web/img/2.jpg","createTime":null,"updateTime":null}]}}
+
+接口--- 获取图书列表
+req.url= http://39.104.171.132/wxapp/api/v1/bookList?suiteId=1
+返回值： {"status":1,"msg":"操作成功","page":null,"data":{"bookList":[{"id":1,"name":"第1册","code":null,"suiteId":1,"categoryId":1,"enName":"book one","status":null,"sort":1,"seq":null,"vipType":null},{"id":2,"name":"第2册","code":null,"suiteId":1,"categoryId":1,"enName":"book two","status":null,"sort":2,"seq":null,"vipType":null},{"id":3,"name":"第3册","code":null,"suiteId":1,"categoryId":1,"enName":"book three","status":null,"sort":3,"seq":null,"vipType":null}]}}
+{u'status': 1, u'msg': u'\u64cd\u4f5c\u6210\u529f', u'data': {u'bookList': [{u'status': None, u'sort': 1, u'code': None, u'name': u'\u7b2c1\u518c', u'seq': None, u'id': 1, u'suiteId': 1, u'vipType': None, u'categoryId': 1, u'enName': u'book one'}, {u'status': None, u'sort': 2, u'code': None, u'name': u'\u7b2c2\u518c', u'seq': None, u'id': 2, u'suiteId': 1, u'vipType': None, u'categoryId': 1, u'enName': u'book two'}, {u'status': None, u'sort': 3, u'code': None, u'name': u'\u7b2c3\u518c', u'seq': None, u'id': 3, u'suiteId': 1, u'vipType': None, u'categoryId': 1, u'enName': u'book three'}]}, u'page': None}
+
+接口--- 获取一本图书的详情，包含各页的列表
+req.url= http://39.104.171.132/wxapp/api/v1/book/1
+返回值： {"status":1,"msg":"操作成功","page":null,"data":{"book":{"id":1,"name":"第1册","code":null,"suiteId":1,"categoryId":1,"enName":"book one","status":null,"sort":1,"seq":null,"vipType":null},"pageList":[{"id":1,"bookId":1,"name":"page 1","sort":1,"status":null,"img":"/web/img/toads_in_roads/070922413071003.jpg","audio":null},{"id":2,"bookId":1,"name":"page 2","sort":2,"status":null,"img":"/web/img/toads_in_roads/070922413071004.jpg","audio":null},{"id":3,"bookId":1,"name":"page 3","sort":3,"status":null,"img":"/web/img/toads_in_roads/070922413071005.jpg","audio":null},{"id":4,"bookId":1,"name":"page 4","sort":4,"status":null,"img":"/web/img/toads_in_roads/070922413071006.jpg","audio":null}]}}
+
+接口--- 获取一页的详情
+req.url= http://39.104.171.132/wxapp/api/v1/page/1
+返回值： {"status":1,"msg":"操作成功","page":null,"data":{"itemList":[{"id":1,"bookId":1,"pageId":1,"subject":"Over 170 decodable books for phonics","cnSubject":null,"audio":"/web/img/1.mp3","sort":1},{"id":2,"bookId":1,"pageId":1,"subject":"Over 280 Biff, Chip and Kipper adventures for a rich reading experience","cnSubject":null,"audio":"/web/img/a.m4a","sort":2},{"id":3,"bookId":1,"pageId":1,"subject":"Traditional Tales from around the world","cnSubject":null,"audio":"/web/img/3.mp3","sort":3}],"page":{"id":1,"bookId":1,"name":"page 1","sort":1,"status":null,"img":"/web/img/toads_in_roads/070922413071003.jpg","audio":null}}}
+
+
+接口--- 查询我读过的bookSuite
+req.url= http://39.104.171.132/wxapp/api/v1/mySuiteList?keyword=
+Post Json参数= {"currentPage": 1}
+返回值： {"status":1,"msg":"操作成功","page":{"pageSize":2,"totalPage":1,"totalCount":1,"currentPage":1,"sortField":null,"order":null,"result":[],"currentResult":0},"data":{"suiteList":[{"id":1,"name":"牛津阅读树第1季","enName":"oxford level 1","catagoryId":1,"sort":1,"memo":null,"status":null,"logo":"/web/img/1.jpg","createTime":null,"updateTime":null}]}}
+--item= 牛津阅读树第1季
+
+
+
+接口--- 注销登录，
+req.url= http://39.104.171.132/wxapp/api/v1/logout?token=15F3EBDF7F644E7A81749ACC13C4B015
+返回值： {"status":1,"msg":"操作成功","page":null,"data":{}}

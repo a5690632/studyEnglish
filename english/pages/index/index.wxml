@@ -1,0 +1,26 @@
+<view>
+    <view class="categoryList_box">
+        <dl wx:for="{{categoryList}}" id="{{item.id}}" bindtap="enter_booksuite" wx:key="id" data-name="{{item.name}}">
+            <dt>
+                <image src="{{item.logo}}" wx:if="{{item.logo}}"> </image>
+                  <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+            </dt>
+            <dd>{{item.name}}</dd>
+        </dl>
+    </view>
+    <view class="content">
+        <view class="name">最新推荐</view>
+        <view wx:for="{{suiteList}}" id="{{item.id}}" bindtap="enter_booklist" class="suiteList" wx:key="id" data-name="{{item.name}}">
+            <dl>
+                <dt>
+                    <image src="{{item.logo}}" wx:if="{{item.logo}}"></image>
+                    <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                </dt>
+                <dd>
+                    <text class="name">{{item.name}}</text>
+                    <text class="grade">{{item.enName}}</text>
+                </dd>
+            </dl>
+        </view>
+    </view>
+</view>

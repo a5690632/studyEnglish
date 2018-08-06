@@ -1,0 +1,32 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/course/course",
+    "pages/login/login",
+    "pages/user_center/user_center",
+    "pages/booksuite/booksuite",
+    "pages/booklist/booklist",
+    "pages/book/book"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+  
+        "pagePath": "pages/index/index",
+        "text": "图书馆"
+      },
+      {
+        
+        "pagePath": "pages/user_center/user_center",
+        "text": "用户中心"
+      }
+    ]
+  }
+}

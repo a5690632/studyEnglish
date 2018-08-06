@@ -1,0 +1,65 @@
+.name{
+    text-align: center;
+    font-size: 30rpx;
+    color:black ;
+    margin-bottom:20rpx;     
+}
+.content{
+    margin-top:20rpx;
+    padding-bottom:30rpx;
+}
+
+
+
+.categoryList_box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    align-content: space-between;
+}
+.categoryList_box dl{
+    width:138rpx ;
+    text-align: center;
+}
+.categoryList_box dt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 106rpx; 
+}
+
+.categoryList_box image{
+    width: 138rpx;
+    height: 106rpx;
+}
+.categoryList_box dd{
+    width:138rpx ;
+    height:46rpx ;
+    font-size: 26rpx;
+    color:#5b5b5b ;
+    line-height: 46rpx;
+}
+
+.suiteList {
+    height: 182rpx;
+    border-top: 1rpx soild #8dadd2; 
+    padding-left:48rpx;
+}
+
+.suiteList dl{
+    display: flex;
+    padding-top: 8rpx;
+}
+.suiteList image{
+    width:132rpx;
+    height:158rpx;
+}
+.suiteList dd{
+    padding-top: 20rpx;
+    padding-left: 36rpx;
+}
+.suiteList dd text{
+    display: block;
+    margin-bottom:10rpx ;
+    font-size: 24rpx;
+}

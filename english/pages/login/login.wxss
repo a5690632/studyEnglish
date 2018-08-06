@@ -1,0 +1,49 @@
+input{
+   float: left;
+   height: 60rpx;
+    
+}
+.login{
+
+    height: 60rpx;
+    line-height: 60rpx;
+    border:1rpx solid #666666;
+    background-color: gainsboro;
+    text-align: center;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    
+}
+.code{
+    float: left;
+    height: 60rpx;
+    line-height: 60rpx;
+    border:1rpx solid #666666;
+    background-color: gainsboro;
+    text-align: center;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    
+}
+.label{
+    float: left;
+    line-height: 60rpx;
+    height: 60rpx;
+   
+}
+label{
+    float: left;
+   
+}
+.login_box{
+    margin:200rpx auto;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+
+}
+.row{
+    margin-bottom: 60rpx;
+    
+
+
+}

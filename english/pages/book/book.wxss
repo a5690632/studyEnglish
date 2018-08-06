@@ -1,0 +1,21 @@
+.bookbox{
+   padding: 30rpx;
+}
+.bookbox .item{
+    float: left;
+    margin-right:16rpx; 
+}
+.bookbox .img{
+    height:150rpx ;
+    width: 200rpx;
+}
+.bookbox .img image{
+    height:150rpx ;
+    width: 220rpx;
+}
+.bookbox .name{
+    text-align: center;
+    font-size: 26rpx;
+    line-height:80rpx ;
+    height: 80rpx;
+}

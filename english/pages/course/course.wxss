@@ -1,0 +1,45 @@
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.item_box{
+    padding: 30rpx;
+}
+
+.item_box .item{
+    font-size: 32rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    line-height: 60rpx;
+    border-bottom: 2rpx solid black;
+    padding-left: 30rpx;
+
+}
+.item_box .active{
+    background-color: rgb(250, 216, 21);   
+}
+.playbox{
+    width:100%;
+    position: absolute;
+    bottom: 20rpx;
+    line-height: 80rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.playbox .box{
+    line-height: 80rpx;
+    border-radius: 50%;
+    border:1rpx solid;
+    width: 80rpx;
+    height: 80rpx;
+    text-align: center;
+   
+}
+
+.playbox .active{
+    
+
+
+}

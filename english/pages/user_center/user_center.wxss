@@ -1,0 +1,18 @@
+/* pages/user_center/user_center.wxss */
+.user view {
+    padding-left:120rpx ;
+    height:80rpx ;
+    line-height:80rpx;
+    border-bottom: 1rpx solid black;
+    position: relative;
+}
+.icon{
+    width: 60rpx;
+    height:60rpx ;
+    position: absolute;
+    top:26rpx ;
+    left: 82rpx;
+}
+.vip{
+    color: rgb(250, 216, 21)
+}

@@ -1,0 +1,28 @@
+.booklist{
+    padding-bottom: 30rpx;    
+}
+.booklist .item{
+    height:180rpx;
+    padding-left:48rpx;
+}
+
+.booklist dl{
+    display: flex;
+    padding-top: 8rpx;
+}
+.booklist image{
+    width:132rpx;
+    height:158rpx;
+}
+.booklist dd{
+    padding-top: 20rpx;
+    padding-left: 36rpx;
+}
+.booklist dd text{
+    display: block;
+    margin-bottom:10rpx ;
+    font-size: 24rpx;
+}
+.booklist .nouse{
+  background-color: rgba(214, 214, 214, 0.781);
+}

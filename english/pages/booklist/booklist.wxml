@@ -1,0 +1,36 @@
+<view>
+    <view class="booklist">
+        <view wx:for="{{bookList}}" wx:key="id">
+            <view wx:if="{{item.vipType!=1}}" bindtap="enter_book" id="{{item.id}}" class="item use" data-name="{{item.name}}">
+                <dl>
+                    <dt>
+                        <image src="{{item.img}}" wx:if="{{item.img}}"></image>
+                        <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                    </dt>
+                    <dd>
+                        <text>{{item.name}}</text>
+                        <text>{{item.enName}}</text>
+
+                    </dd>
+                </dl>
+                <view>
+
+                </view>
+            </view>
+            <view wx:if="{{item.vipType==1}}" bindtap="help" id="{{item.id}}" class="item nouse" data-name="{{item.name}}">
+                <dl>
+                    <dt>
+                        <image src="{{item.img}}" wx:if="{{item.img}}"></image>
+                        <image src="https://www.devpmis.cn/wxapp/web/img/blank.png" wx:else></image>
+                    </dt>
+                    <dd>
+                        <text>{{item.name}}</text>
+                        <text>{{item.enName}}</text>
+                    </dd>
+                </dl>
+                <view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

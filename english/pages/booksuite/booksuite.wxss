@@ -1,0 +1,29 @@
+/* pages/my_resources/my_resources.wxss */
+
+.suiteList {
+    padding-bottom: 30rpx;
+}
+
+.booklist {
+    height: 182rpx;
+    border-top: 1rpx soild #8dadd2; 
+    padding-left:48rpx;
+}
+
+.suiteList dl{
+    display: flex;
+    padding-top: 8rpx;
+}
+.suiteList image{
+    width:132rpx;
+    height:158rpx;
+}
+.suiteList dd{
+    padding-top: 20rpx;
+    padding-left: 36rpx;
+}
+.suiteList dd text{
+    display: block;
+    margin-bottom:10rpx ;
+    font-size: 24rpx;
+}
