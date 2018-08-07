@@ -5,9 +5,18 @@
     float: left;
     margin-right:30rpx; 
 }
+.bookbox .item{
+    float: left;
+    margin-right:20rpx; 
+}
+.bookbox .item:nth-child(3n){
+    float: left;
+    margin-right:0; 
+}
+
 .bookbox .img{
     height:150rpx ;
-    width: 200rpx;
+    width: 220rpx;
 }
 .bookbox .img image{
     height:150rpx ;

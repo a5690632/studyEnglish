@@ -30,13 +30,7 @@ Page({
                                     categoryList: res.data.data.categoryList, //功能区
                                     suiteList: res.data.data.suiteList, //书
                                 })
-                                app.request({
-                                    url:app.interface.user_message,
-                                    success:(res)=>{
-                                        app.user=res.data.data.userinfo
-                                        
-                                    }
-                                })
+                               
                             },
                         })
                     }
@@ -45,10 +39,10 @@ Page({
                 app.request({
                     url: app.interface.index,
                     success: (res) => {
-                        this.setData({
-                            categoryList: res.data.data.categoryList, //功能区
-                            suiteList: res.data.data.suiteList, //书
-                        })
+                        res.data.data.suiteList.forEach(e => {
+                            e.logo="https://www.readinglib.cn/wxapp"+e.logo
+                        });
+                        
                     },
                 })
             }

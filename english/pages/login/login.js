@@ -87,12 +87,13 @@ Page({
                 app.request({
                     url:app.interface.user_message,
                     success:(res)=>{
-                        app.user=res.data.data
+                       wx.setStorageSync("user",res.data.data)
+                       wx.switchTab({
+                        url:"/pages/index/index"
+                        })  
                     }
                 })
-                wx.switchTab({
-                    url:"/pages/index/index"
-                })  
+              
             }
         })
     },

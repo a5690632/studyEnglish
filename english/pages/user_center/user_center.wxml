@@ -1,12 +1,12 @@
 <!--pages/user_center/user_center.wxml-->
 <view class="user">
     <block  wx:if="{{user}}">
-        <view wx:if="{{user.status=='1'}}">
+        <view wx:if="{{user.status==1}}">
             <text class="icon fa fa-user" ></text>
             {{user.mobile}}
             <text class="ordinary">（普通会员）</text>
         </view>
-        <view wx:if="{{user.status=='0'}}">
+        <view wx:if="{{user.status==0}}">
             <text class="icon fa fa-user" ></text>
             {{user.mobile}}
             <text class="vip">（vip会员）</text>

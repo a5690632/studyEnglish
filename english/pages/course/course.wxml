@@ -11,8 +11,8 @@
         </view>
     </view>
     <view class="playbox">
-        <view>当前第{{page_detail.sort}}页</view>
-        <view bindtap="prev"    class="fa fa-step-backward  box"></view>.
+        <view>第{{page_detail.sort}}页</view>
+        <view bindtap="prev"    class="fa fa-step-backward  box"></view>
         <view bindtap="play"    class="fa fa-play  box"     wx:if="{{status==0}}"></view>
         <view bindtap="pause"   class="fa fa-pause box"     wx:else></view>
         <view bindtap="next"    class="fa fa-step-forward   box"></view>

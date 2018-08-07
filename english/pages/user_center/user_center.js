@@ -6,16 +6,33 @@ Page({
      * 页面的初始数据
      */
     data: {
-        user:{}
+        user: {
+            status: "",
+        }
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.setData({
-            user:app.user
-        })
+        if (wx.getStorageSync("user")) {
+            this.setData({
+                user: wx.getStorageSync("user").userinfo
+            })
+        } else {
+            app.request({
+                url: app.interface.user_message,
+                success: (res) => {
+                    wx.setStorageSync("user", res.data.data)
+                    this.setData({
+                        user: res.data.data.userinfo
+                    })
+                }
+            })
+
+
+        }
+
     },
 
     /**
@@ -34,12 +51,12 @@ Page({
     },
     help() {
         app.request({
-            url:app.interface.concent_us,
-            success:(res)=>{
+            url: app.interface.concent_us,
+            success: (res) => {
                 wx.showModal({
-                    showCancel:false,
+                    showCancel: false,
                     title: res.data.data.title,
-                    content:res.data.data.content
+                    content: res.data.data.content
                 })
             }
         })
@@ -57,7 +74,7 @@ Page({
                 })
                 wx.removeStorageSync("token")
                 this.setData({
-                    user:{}
+                    user: {}
                 })
                 wx.redirectTo({
                     url: "/pages/login/login"
