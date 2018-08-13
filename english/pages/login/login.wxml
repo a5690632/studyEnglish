@@ -6,7 +6,7 @@
             <input type="number" value="{{phone}}" bindinput="enter_phone" placeholder="输入手机号" />
 
             <view bindtap="verification" class="code" wx-if="{{send_status==false}}">发送验证码</view>
-            <view class="number" wx-if="{{send_status==true}}">{{time}}</view>
+            <view class="number" wx-if="{{send_status==true}}">{{time}}秒后重新发送</view>
         </view>
         <view class="clearfix row">
 
