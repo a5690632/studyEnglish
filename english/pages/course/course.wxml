@@ -1,7 +1,7 @@
 <view >
     <view class="help fa fa-question-circle" bindtap="help"></view>
     <view class="img">
-        <image src="{{page_detail.img}}" wx:if="page_detail.img" mode="aspectFit"></image>
+        <image src="{{page_detail.img}}" wx:if="page_detail.img" mode="aspectFit" bindtap="big" data-src="{{page_detail.img}}"></image>
         <image src="https://www.readinglib.cn/wxapp/web/img/blank.png" wx:else  mode="aspectFit"></image>
     </view>
     <view class="item_box">

@@ -24,7 +24,12 @@ Page({
                             url: app.interface.index,
                             success: (res) => {
                                 res.data.data.suiteList.forEach(e => {
-                                    e.logo="https://www.readinglib.cn/wxapp"+e.logo
+                                   
+                                    if(e.logo.substr(0,4)!=='http'){
+                                      
+                                        e.logo="https://www.readinglib.cn/wxapp"+e.logo
+                                    }
+                                   
                                 });
                                 this.setData({
                                     categoryList: res.data.data.categoryList, //功能区
@@ -40,9 +45,17 @@ Page({
                     url: app.interface.index,
                     success: (res) => {
                         res.data.data.suiteList.forEach(e => {
-                            e.logo="https://www.readinglib.cn/wxapp"+e.logo
+                           
+                            if(e.logo.substr(0,4)!=='http'){
+                             
+                                e.logo="https://www.readinglib.cn/wxapp"+e.logo
+                            }
+                           
                         });
-                        
+                        this.setData({
+                            categoryList: res.data.data.categoryList, //功能区
+                            suiteList: res.data.data.suiteList, //书
+                        })
                     },
                 })
             }
@@ -76,7 +89,6 @@ Page({
             url: `/pages/booklist/booklist?id=${event.currentTarget.id}&name=${event.currentTarget.dataset.name}`
         })
     },
-    
 
     onShareAppMessage: function () {
         // 用户点击右上角分享

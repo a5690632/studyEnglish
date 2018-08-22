@@ -18,12 +18,12 @@ Page({
     },
     created_audio() {
         //创建audio
-
         innerAudioContext.src = this.data.itemList[0].audio
         innerAudioContext.play()
         innerAudioContext.onEnded(() => {
             if (this.data.index < this.data.itemList.length - 1) {
                 innerAudioContext.src = this.data.itemList[this.data.index + 1].audio
+                innerAudioContext.play()
                 this.setData({
                     index: Number(this.data.index + 1)
                 })
@@ -32,6 +32,11 @@ Page({
             }
         })
 
+    },
+    big(event){
+        wx.previewImage({
+            urls: [event.currentTarget.dataset.src],
+        })
     },
     choose_play(event) {
 
@@ -73,9 +78,14 @@ Page({
         app.request({
             url: `${app.interface.course}/${id}`,
             success: (res) => {
-                res.data.data.page.img = "https://www.readinglib.cn/wxapp" + res.data.data.page.img
+                if(res.data.data.page.img.substr(0, 4) !== 'http'){
+                    res.data.data.page.img = "https://www.readinglib.cn/wxapp" + res.data.data.page.img
+                }
                 res.data.data.itemList.forEach(element => {
-                    element.audio = "https://www.readinglib.cn/wxapp" + element.audio
+                    if (element.audio.substr(0, 4) !== 'http') {
+                        element.audio = "https://www.readinglib.cn/wxapp" + element.audio
+                    }
+
                 });
                 this.setData({
                     itemList: res.data.data.itemList,
@@ -89,23 +99,23 @@ Page({
     play() {
         innerAudioContext.play()
         this.setData({
-            status:1
+            status: 1
         })
     },
     pause() {
         innerAudioContext.pause()
         this.setData({
-            status:0
+            status: 0
         })
     },
     help() {
         app.request({
-            url:app.interface.concent_us,
-            success:(res)=>{
+            url: app.interface.concent_us,
+            success: (res) => {
                 wx.showModal({
-                    showCancel:false,
+                    showCancel: false,
                     title: res.data.data.title,
-                    content:res.data.data.content
+                    content: res.data.data.content
                 })
             }
         })

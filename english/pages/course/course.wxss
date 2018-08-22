@@ -18,7 +18,7 @@
 }
 
 .item_box .item{
-    font-size: 32rpx;
+    font-size: 34rpx;
     padding-top: 20rpx;
     padding-bottom: 20rpx;
     line-height: 60rpx;
